@@ -3,8 +3,11 @@
 # the hash map in O(1) time. The overall time complexity of this solution is O(n) and the space complexity 
 # is also O(n) due to the hash map.
 
+from typing import List
+
+
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: List[int], target: int) -> List[int]: # type: ignore
 
         num_map = {}
 
