@@ -25,7 +25,6 @@ Example:
 
 Without isolation, installing one version may break another project.
 
-⸻
 
 Reproducibility
 
