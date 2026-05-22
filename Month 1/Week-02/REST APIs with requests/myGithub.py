@@ -1,4 +1,4 @@
-import requests
+import requests # type: ignore
 
 # Your GitHub details
 USERNAME = "RishavVerma0"
