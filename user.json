@@ -1,0 +1,13 @@
+{
+    "first-name": "Rishav",
+    "last-name": "Verma",
+    "age": 22,
+    "Skills": [
+        "Python",
+        "Java",
+        "C++"
+    ],
+    "Education": {
+        "Bachelors": "Computer Science"
+    }
+}
