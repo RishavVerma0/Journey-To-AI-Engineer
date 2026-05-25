@@ -1,0 +1,10 @@
+2026-05-25 22:52:35,954 | MyAppLogger | INFO | Application Started
+2026-05-25 22:52:35,954 | MyAppLogger | INFO | Dividing 10 by 2
+2026-05-25 22:52:35,954 | MyAppLogger | DEBUG | Result of Division: 5.0
+2026-05-25 22:52:35,954 | MyAppLogger | INFO | Dividing 10 by 0
+2026-05-25 22:52:35,954 | MyAppLogger | ERROR | Attempted to divide by zero!
+Traceback (most recent call last):
+  File "/Users/rishavverma/Road to AI Engineer /Month 1/Week-02/Loggers/loggers_advanced.py", line 34, in divide
+    result = a / b
+ZeroDivisionError: division by zero
+2026-05-25 22:52:35,954 | MyAppLogger | INFO | Application Finished

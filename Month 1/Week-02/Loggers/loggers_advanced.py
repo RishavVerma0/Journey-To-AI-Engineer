@@ -8,7 +8,7 @@ logger = logging.getLogger("MyAppLogger")
 logger.setLevel(logging.DEBUG)
 
 #implementing Formatter
-formatter = logging.Formatter('%(asctime)s | %(name)s | %levelname)s | %(message)s')
+formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')
 
 #implementing the Console Handler
 console_handler = logging.StreamHandler()
