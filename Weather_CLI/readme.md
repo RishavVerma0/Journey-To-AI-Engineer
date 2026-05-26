@@ -10,7 +10,7 @@ A beginner-friendly command-line tool that fetches current weather for any city 
 
 ```
 01-weather-cli/
-├── weather_cli.py      # main script
+├── weather.py      # main script
 ├── requirements.txt    # dependencies
 └── README.md
 ```

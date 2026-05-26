@@ -4,7 +4,7 @@ import json
 import logging
 import sys
 from typing import Tuple
-
+from pathlib import Path
 
 # Configure logging settings
 # If verbose mode is enabled, show DEBUG logs
@@ -88,15 +88,19 @@ def get_weather(lat: float, lon: float) -> dict:
 
 
 # Function to save weather data into JSON file
-def save_data(data: dict, path: str):
+def save_data(data: dict, filename: str):
 
-    # Open file in write mode
-    with open(path, "w") as f:
+    # Get current script directory
+    current_dir = Path(__file__).parent
 
-        # Save formatted JSON data
+    # Create full file path
+    file_path = current_dir / filename
+
+    # Save JSON file
+    with open(file_path, "w") as f:
         json.dump(data, f, indent=2)
 
-    logging.info(f"Saved weather data to {path}")
+    logging.info(f"Saved weather data to {file_path}")
 
 
 # Main function
