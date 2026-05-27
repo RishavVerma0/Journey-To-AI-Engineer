@@ -1,0 +1,97 @@
+{
+  "topic": "python",
+  "count": 10,
+  "fetched_at": "2026-05-26T18:54:58.270621",
+  "repos": [
+    {
+      "name": "system-design-primer",
+      "full_name": "donnemartin/system-design-primer",
+      "stars": 350394,
+      "forks": 56440,
+      "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "language": "Python"
+    },
+    {
+      "name": "awesome-python",
+      "full_name": "vinta/awesome-python",
+      "stars": 299695,
+      "forks": 27979,
+      "description": "An opinionated list of Python frameworks, libraries, tools, and resources",
+      "url": "https://github.com/vinta/awesome-python",
+      "language": "Python"
+    },
+    {
+      "name": "project-based-learning",
+      "full_name": "practical-tutorials/project-based-learning",
+      "stars": 266662,
+      "forks": 34655,
+      "description": "Curated list of project-based tutorials",
+      "url": "https://github.com/practical-tutorials/project-based-learning",
+      "language": "Unknown"
+    },
+    {
+      "name": "Python",
+      "full_name": "TheAlgorithms/Python",
+      "stars": 221385,
+      "forks": 50671,
+      "description": "All Algorithms implemented in Python",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "language": "Python"
+    },
+    {
+      "name": "tensorflow",
+      "full_name": "tensorflow/tensorflow",
+      "stars": 195262,
+      "forks": 75338,
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "language": "C++"
+    },
+    {
+      "name": "AutoGPT",
+      "full_name": "Significant-Gravitas/AutoGPT",
+      "stars": 184563,
+      "forks": 46220,
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "language": "Python"
+    },
+    {
+      "name": "CS-Notes",
+      "full_name": "CyC2018/CS-Notes",
+      "stars": 184406,
+      "forks": 50960,
+      "description": ":books: 技术面试必备基础知识、Leetcode、计算机操作系统、计算机网络、系统设计",
+      "url": "https://github.com/CyC2018/CS-Notes",
+      "language": "Unknown"
+    },
+    {
+      "name": "yt-dlp",
+      "full_name": "yt-dlp/yt-dlp",
+      "stars": 165836,
+      "forks": 13954,
+      "description": "A feature-rich command-line audio/video downloader",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "language": "Python"
+    },
+    {
+      "name": "transformers",
+      "full_name": "huggingface/transformers",
+      "stars": 160949,
+      "forks": 33322,
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "url": "https://github.com/huggingface/transformers",
+      "language": "Python"
+    },
+    {
+      "name": "HelloGitHub",
+      "full_name": "521xueweihan/HelloGitHub",
+      "stars": 158745,
+      "forks": 12068,
+      "description": ":octocat: 分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.",
+      "url": "https://github.com/521xueweihan/HelloGitHub",
+      "language": "Python"
+    }
+  ]
+}

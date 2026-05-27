@@ -1,0 +1,125 @@
+{
+  "count": 20,
+  "jokes": [
+    {
+      "id": 199,
+      "category": "Pun",
+      "joke": "Today, my son asked \"Can I have a book mark?\" and I burst into tears.\n11 years old and he still doesn't know my name is Brian.",
+      "fetched_at": "2026-05-26T17:48:07.144099"
+    },
+    {
+      "id": 237,
+      "category": "Pun",
+      "joke": "I have a joke about trickle down economics, but 99% of you will never get it.",
+      "fetched_at": "2026-05-26T17:48:07.985867"
+    },
+    {
+      "id": 73,
+      "category": "Pun",
+      "joke": "A horse walks into a bar.\n\"Hey\", the Bartender says.\n\"Sure\", the horse replies.",
+      "fetched_at": "2026-05-26T17:48:08.905609"
+    },
+    {
+      "id": 125,
+      "category": "Pun",
+      "joke": "I'm reading a book about anti-gravity. It's impossible to put down!",
+      "fetched_at": "2026-05-26T17:48:13.576764"
+    },
+    {
+      "id": 235,
+      "category": "Pun",
+      "joke": "I was reading a great book about an immortal dog the other day. It was impossible to put down.",
+      "fetched_at": "2026-05-26T17:48:14.256301"
+    },
+    {
+      "id": 184,
+      "category": "Pun",
+      "joke": "Two fish in a tank. One turns to the other and says, \"Do you know how to drive this thing?\"",
+      "fetched_at": "2026-05-26T17:48:14.979463"
+    },
+    {
+      "id": 184,
+      "category": "Pun",
+      "joke": "Two fish in a tank. One turns to the other and says, \"Do you know how to drive this thing?\"",
+      "fetched_at": "2026-05-26T17:48:16.233489"
+    },
+    {
+      "id": 73,
+      "category": "Pun",
+      "joke": "A horse walks into a bar.\n\"Hey\", the Bartender says.\n\"Sure\", the horse replies.",
+      "fetched_at": "2026-05-26T17:48:16.981286"
+    },
+    {
+      "id": 237,
+      "category": "Pun",
+      "joke": "I have a joke about trickle down economics, but 99% of you will never get it.",
+      "fetched_at": "2026-05-26T17:48:17.692409"
+    },
+    {
+      "id": 199,
+      "category": "Pun",
+      "joke": "Today, my son asked \"Can I have a book mark?\" and I burst into tears.\n11 years old and he still doesn't know my name is Brian.",
+      "fetched_at": "2026-05-26T17:48:18.385004"
+    },
+    {
+      "id": 184,
+      "category": "Pun",
+      "joke": "Two fish in a tank. One turns to the other and says, \"Do you know how to drive this thing?\"",
+      "fetched_at": "2026-05-26T17:48:19.433237"
+    },
+    {
+      "id": 235,
+      "category": "Pun",
+      "joke": "I was reading a great book about an immortal dog the other day. It was impossible to put down.",
+      "fetched_at": "2026-05-26T17:48:20.595191"
+    },
+    {
+      "id": 237,
+      "category": "Pun",
+      "joke": "I have a joke about trickle down economics, but 99% of you will never get it.",
+      "fetched_at": "2026-05-26T17:48:21.289680"
+    },
+    {
+      "id": 125,
+      "category": "Pun",
+      "joke": "I'm reading a book about anti-gravity. It's impossible to put down!",
+      "fetched_at": "2026-05-26T17:48:22.544120"
+    },
+    {
+      "id": 237,
+      "category": "Pun",
+      "joke": "I have a joke about trickle down economics, but 99% of you will never get it.",
+      "fetched_at": "2026-05-26T17:48:23.322031"
+    },
+    {
+      "id": 235,
+      "category": "Pun",
+      "joke": "I was reading a great book about an immortal dog the other day. It was impossible to put down.",
+      "fetched_at": "2026-05-26T17:48:24.006442"
+    },
+    {
+      "id": 219,
+      "category": "Pun",
+      "joke": "I was struggling to figure out how lightning works, but then it struck me.",
+      "fetched_at": "2026-05-26T17:48:24.695015"
+    },
+    {
+      "id": 237,
+      "category": "Pun",
+      "joke": "I have a joke about trickle down economics, but 99% of you will never get it.",
+      "fetched_at": "2026-05-26T17:48:25.623496"
+    },
+    {
+      "id": 199,
+      "category": "Pun",
+      "joke": "Today, my son asked \"Can I have a book mark?\" and I burst into tears.\n11 years old and he still doesn't know my name is Brian.",
+      "fetched_at": "2026-05-26T17:48:26.703892"
+    },
+    {
+      "id": 235,
+      "category": "Pun",
+      "joke": "I was reading a great book about an immortal dog the other day. It was impossible to put down.",
+      "fetched_at": "2026-05-26T17:48:27.373324"
+    }
+  ]
+}
