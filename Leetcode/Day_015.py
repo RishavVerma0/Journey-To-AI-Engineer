@@ -26,8 +26,6 @@
 # Constraints:
 
 # 1 <= num <= 231 - 1
-
-
 class Solution: # type: ignore
     def isPerfectSquare(self, num: int) -> bool:
         i = 0
