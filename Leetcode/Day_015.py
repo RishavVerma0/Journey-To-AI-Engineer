@@ -28,7 +28,7 @@
 # 1 <= num <= 231 - 1
 
 
-class Solution:
+class Solution: # type: ignore
     def isPerfectSquare(self, num: int) -> bool:
         i = 0
         while i * i <= num:
@@ -36,3 +36,25 @@ class Solution:
                 return True
             i+=1
         return False
+
+### Optimized solution using binary search
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        if num < 2:
+            return True
+
+        left, right = 1, num //2
+
+        while left <= right:
+            mid = (left + right) // 2
+            square = mid*mid
+
+            if square == num:
+                return True
+            elif square < num:
+                left = mid+1
+            else:
+                right = mid -1
+
+        return False
+           
