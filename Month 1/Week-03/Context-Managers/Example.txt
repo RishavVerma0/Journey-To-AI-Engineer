@@ -1,0 +1,2 @@
+Hello, Github!
+This file was created using a custom context manager.
