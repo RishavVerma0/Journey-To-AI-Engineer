@@ -98,29 +98,6 @@ Dataset contains information about:
 - Runtime distribution
 - Average movie duration
 
-### 7. Correlation Analysis
-
-Relationships between:
-
-- Budget
-- Revenue
-- Popularity
-- Vote Count
-- Runtime
-
-### 8. Profit Analysis
-
-Profit calculated as:
-
-Profit = Revenue − Budget
-
-- Most profitable movies
-- Profit trends
-
-### 9. Release Year Analysis
-
-- Movies released per year
-- Growth in movie production
 
 ---
 
