@@ -2,3 +2,34 @@ data/
 *.csv
 *.zip
 *.parquet
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Large datasets
+data/
+datasets/
+
+# Model files
+*.h5
+*.pt
+*.pth
+*.ckpt
+
+# VS Code
+.vscode/
