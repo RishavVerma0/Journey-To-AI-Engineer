@@ -1,30 +1,25 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import Optional
+# main.py
 import uuid
+from fastapi import FastAPI, HTTPException
+
+# Import the shared database instance and schemas
+from database import db
+from models import Item, ItemUpdate
 
 app = FastAPI(title="My CRUD API", version="1.0.0")
 
-# ----- Schema -----
-class Item(BaseModel):
-    name: str
-    description: Optional[str] = None
-    price: float
-    in_stock: bool = True
-
-class ItemUpdate(BaseModel):
-    name: Optional[str] = None
-    description: Optional[str] = None
-    price: Optional[float] = None
-    in_stock: Optional[bool] = None
-
-# ----- In-memory DB -----
-db: dict = {}
-
-# ----- Endpoints -----
 @app.get("/")
 def root():
     return {"message": "Welcome to my CRUD API 🚀"}
+
+@app.get("/debug")
+def debug_db():
+    # This will now correctly show 200 items because it references the shared 'db'
+    keys = list(db.keys())
+    return {
+        "count": len(db),
+        "first_5_keys": keys[:5]
+    }
 
 @app.get("/items")
 def get_all_items():
@@ -39,15 +34,16 @@ def get_item(item_id: str):
 @app.post("/items", status_code=201)
 def create_item(item: Item):
     item_id = str(uuid.uuid4())[:8]
-    db[item_id] = {"id": item_id, **item.dict()}
+    db[item_id] = {"id": item_id, **item.model_dump()}
     return {"message": "Created", "item": db[item_id]}
 
 @app.put("/items/{item_id}")
 def update_item(item_id: str, update: ItemUpdate):
     if item_id not in db:
         raise HTTPException(status_code=404, detail="Item not found")
-    for field, value in update.dict(exclude_unset=True).items():
-        db[item_id][field] = value
+    
+    update_data = update.model_dump(exclude_unset=True)
+    db[item_id].update(update_data)
     return {"message": "Updated", "item": db[item_id]}
 
 @app.delete("/items/{item_id}")
