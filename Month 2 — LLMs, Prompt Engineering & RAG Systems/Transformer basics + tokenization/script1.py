@@ -15,3 +15,11 @@ analyze("ChatGPT is amazing!")
 analyze("def fibonacci(n): return n")
 analyze("नमस्ते")       # Hindi
 analyze("1 + 1 = 2")
+
+def estimate_cost(text, model="gpt-4o-mini"):
+    tokens = enc.encode(text)
+    # gpt-4o-mini: $0.00015 per 1K input tokens
+    cost = (len(tokens) / 1000) * 0.00015
+    print(f"Tokens: {len(tokens)}, Est. cost: ${cost:.6f}")
+
+estimate_cost("Write me a poem about Python programming.")
