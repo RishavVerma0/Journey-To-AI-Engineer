@@ -16,7 +16,7 @@ try:
             {"role": "system", "content": "You are a concise assistant."},
             {"role": "user", "content": "Explain attention in one sentence."}
         ],
-        temperature=0.7
+        temperature=1.7
     )
 
     print("Reply:", response.choices[0].message.content)
