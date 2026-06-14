@@ -4,7 +4,7 @@
 
 from openai import OpenAI
 
-api_key = ""
+api_key = "Paste-Your-API-KEY-Here"
 base_url = "https://api.cerebras.ai/v1"
 model = "gpt-oss-120b"
 
