@@ -3,8 +3,7 @@
 
 
 from openai import OpenAI
-
-api_key = "********************************************************"
+api_key = "Paste-Your-API-KEY-Here"
 base_url = "https://api.anthropic.com/v1/"
 model = "claude-sonnet-4-5"
 
