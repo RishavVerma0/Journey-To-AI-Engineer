@@ -29,5 +29,5 @@ print(nums[:3])
 #printing last 3 values
 print(nums[-3:])
 
-#printing every second element
+#printing every second element of the list
 print(nums[::2])
