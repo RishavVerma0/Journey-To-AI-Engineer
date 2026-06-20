@@ -28,7 +28,6 @@ def get_client(provider: str):
             base_url="https://api.cerebras.ai/v1",
         )
         return client, "llama3.1-8b"
-
     else:
         raise ValueError(
             f"Unknown provider: '{provider}'. "
