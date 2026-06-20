@@ -22,12 +22,12 @@ def get_client(provider: str):
         )
         return client, "llama-3.1-8b-instant"
 
-    # elif provider == "cerebras":
-    #     client = OpenAI(
-    #         api_key=os.getenv("CEREBRAS_API_KEY"),
-    #         base_url="https://api.cerebras.ai/v1",
-    #     )
-    #     return client, "llama3.1-8b"
+    elif provider == "cerebras":
+        client = OpenAI(
+            api_key=os.getenv("CEREBRAS_API_KEY"),
+            base_url="https://api.cerebras.ai/v1",
+        )
+        return client, "llama3.1-8b"
 
     else:
         raise ValueError(
