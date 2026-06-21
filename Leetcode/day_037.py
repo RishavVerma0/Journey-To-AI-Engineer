@@ -52,6 +52,8 @@
 # This word contains a '$' character and does not have a consonant.
 
 
+from re import I
+
 from regex import match
 
 
