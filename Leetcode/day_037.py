@@ -59,4 +59,4 @@ from regex import match
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        return bool(match('(?=.*[aeiou])(?=.*[^\daeiou])\w{3,}$',s,I))  
+        return bool(match('(?=.*[aeiou])(?=.*[^\daeiou])\w{3,}$',s,I))   # type: ignore
