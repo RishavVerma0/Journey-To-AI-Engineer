@@ -30,6 +30,9 @@
 # Output: true
 
 
+from git import List
+
+
 class Solution:
     def validMountainArray(self, arr: List[int]) -> bool:
         n = len(arr)
