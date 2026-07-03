@@ -3,6 +3,7 @@ data/
 *.zip
 *.parquet
 *.npy
+*.sqlite3
 
 # Python
 __pycache__/
