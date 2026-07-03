@@ -4,6 +4,7 @@ data/
 *.parquet
 *.npy
 *.sqlite3
+*chroma_db/
 
 # Python
 __pycache__/
@@ -26,6 +27,7 @@ venv/
 # Large datasets
 data/
 datasets/
+chroma_db/
 
 
 # Model files
