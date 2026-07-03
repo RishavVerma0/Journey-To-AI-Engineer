@@ -5,6 +5,7 @@ data/
 *.npy
 *.sqlite3
 *chroma_db/
+*chroma_imdb_db/
 
 # Python
 __pycache__/
