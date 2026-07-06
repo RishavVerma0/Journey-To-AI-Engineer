@@ -6,6 +6,7 @@ data/
 *.sqlite3
 *chroma_db/
 *chroma_imdb_db/
+*ipl_chromadb
 
 # Python
 __pycache__/
