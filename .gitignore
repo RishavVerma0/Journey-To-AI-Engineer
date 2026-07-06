@@ -7,6 +7,8 @@ data/
 *chroma_db/
 *chroma_imdb_db/
 *ipl_chromadb
+*chroma_store
+
 
 # Python
 __pycache__/
