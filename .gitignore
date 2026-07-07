@@ -8,8 +8,7 @@ data/
 *chroma_imdb_db/
 *ipl_chromadb
 *chroma_store
-
-
+*vector_db
 # Python
 __pycache__/
 *.pyc
