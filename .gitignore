@@ -14,6 +14,7 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+*.json
 
 # Jupyter
 .ipynb_checkpoints/
@@ -38,6 +39,7 @@ chroma_db/
 *.pt
 *.pth
 *.ckpt
+.json
 
 # VS Code
 .vscode/
