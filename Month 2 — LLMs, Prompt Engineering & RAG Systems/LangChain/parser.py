@@ -56,7 +56,7 @@ llm = ChatCerebras(
 
 
 # LCEL chain
-chain = prompt | llm | JsonOutputParser()
+chain = prompt | llm | parser
 
 
 # Inputs
