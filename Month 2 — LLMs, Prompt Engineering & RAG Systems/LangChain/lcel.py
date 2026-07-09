@@ -35,4 +35,4 @@ inputs =[
 ]
 
 for i in inputs:
-    print(i, "->", chain.invoke(i))
+    print(i, "->", chain.invoke(i),"\n")
