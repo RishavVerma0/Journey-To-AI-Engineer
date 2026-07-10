@@ -9,6 +9,7 @@ data/
 *ipl_chromadb
 *chroma_store
 *vector_db
+*.xlsx
 # Python
 __pycache__/
 *.pyc
