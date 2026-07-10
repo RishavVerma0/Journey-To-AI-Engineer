@@ -10,6 +10,7 @@ data/
 *chroma_store
 *vector_db
 *.xlsx
+
 # Python
 __pycache__/
 *.pyc
@@ -41,6 +42,7 @@ chroma_db/
 *.pth
 *.ckpt
 .json
+
 
 # VS Code
 .vscode/
