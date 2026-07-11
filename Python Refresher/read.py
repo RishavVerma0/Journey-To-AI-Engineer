@@ -1,13 +1,9 @@
-import os
-
-script_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(script_dir, "notes.txt")
+from pathlib import Path
 
 try:
-    with open(file_path, "r") as f:
+    with open(Path(__file__).parent / "notes.txt") as f:
         for line in f:
-            line = line.rstrip("\n")
-            if len(line) > 20:
-                print(line)
+            if len(line.strip()) > 20:
+                print(line.strip())
 except FileNotFoundError:
-    print(f"Error: {file_path} was not found.")
+    print("notes.txt not found.")
