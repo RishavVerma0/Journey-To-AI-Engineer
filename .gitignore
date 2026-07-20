@@ -12,6 +12,7 @@ data/
 *.xlsx
 chinook.db
 *.txt
+*.pdf
 
 # Python
 __pycache__/
