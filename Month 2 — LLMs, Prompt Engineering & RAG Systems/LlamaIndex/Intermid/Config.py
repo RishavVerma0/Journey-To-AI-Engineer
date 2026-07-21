@@ -1,5 +1,5 @@
 """Central configuration for the Maruti RAG agent project."""
-
+from pathlib import Path
 from llama_index.core import Settings
 from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.ollama import OllamaEmbedding
@@ -10,7 +10,8 @@ LLM_MODEL = "ollama:qwen2.5:3b"
 EMBED_MODEL = "nomic-embed-text"
 
 # --- Paths ---
-DATA_DIR = "./data"
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
 CHROMA_DIR = "./chroma_db"
 CHROMA_COLLECTION = "maruti_docs"
 
