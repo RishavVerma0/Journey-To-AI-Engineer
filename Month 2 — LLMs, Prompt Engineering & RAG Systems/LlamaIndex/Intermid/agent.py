@@ -1,5 +1,6 @@
-"""Builds the RAG query engine (with the relevance guardrail) and wraps it
-as a tool-calling agent. Import `build_agent()` from here — see main.py."""
+"""Builds the RAG query engine (with a relaxed relevance guardrail) and wraps it
+as a tool-calling agent. Import `build_agent()` from here — see main.py.
+"""
 
 import chromadb
 from llama_index.core import Settings, VectorStoreIndex, PromptTemplate
@@ -18,24 +19,43 @@ from config import (
 )
 
 QA_PROMPT = PromptTemplate(
-    "You are a Maruti Suzuki assistant. Answer ONLY using the context below.\n"
-    f'If the context does not contain the answer, respond exactly with: "{FALLBACK_MESSAGE}"\n\n'
-    "Context:\n{context_str}\n\nQuestion: {query_str}\nAnswer:"
+    "Context information is provided below:\n"
+    "---------------------\n"
+    "{context_str}\n"
+    "---------------------\n"
+    "Using ONLY the context above, answer the question: {query_str}\n"
+    f'If the information is not present in the context, reply exactly: "{FALLBACK_MESSAGE}"'
 )
 
 SYSTEM_PROMPT = (
-    "You are a Maruti Suzuki assistant. You must ONLY answer questions about "
-    "Maruti showrooms, service centers, workshops, FAQs, and policies, and ONLY "
-    "using information returned by the maruti_knowledge_base tool. If the tool "
-    "returns no relevant information, or the question is unrelated to Maruti "
-    "(general knowledge, other car brands, unrelated topics), reply exactly: "
-    f'"{FALLBACK_MESSAGE}" Never guess or use outside knowledge.'
+    "You are an official Maruti Suzuki assistant. "
+    "Your duty is to answer questions about Maruti Suzuki showrooms, service centers, "
+    "workshops, FAQs, and policies. "
+    "ALWAYS call the `maruti_knowledge_base` tool to retrieve relevant context before answering. "
+    "Never answer using outside knowledge or assumptions. "
+    f'If the tool returns no useful context, respond with: "{FALLBACK_MESSAGE}"'
 )
 
 
 def load_index() -> VectorStoreIndex:
     chroma_client = chromadb.PersistentClient(path=CHROMA_DIR)
-    chroma_collection = chroma_client.get_or_create_collection(CHROMA_COLLECTION)
+
+    # Must match the metric set at creation time in ingest.py, or Chroma will
+    # raise/ignore the metadata (collection settings are fixed at creation).
+    chroma_collection = chroma_client.get_or_create_collection(
+        CHROMA_COLLECTION,
+        metadata={"hnsw:space": "cosine"},
+    )
+
+    count = chroma_collection.count()
+    if count == 0:
+        print(
+            f"[Warning] Chroma collection '{CHROMA_COLLECTION}' is empty! "
+            f"Run `python ingest.py` first."
+        )
+    else:
+        print(f"[Info] Loaded Chroma collection '{CHROMA_COLLECTION}' with {count} chunks.")
+
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
     return VectorStoreIndex.from_vector_store(vector_store)
 
@@ -54,14 +74,13 @@ def build_agent() -> FunctionAgent:
         query_engine=query_engine,
         name="maruti_knowledge_base",
         description=(
-            "Use this for ANY question about Maruti Suzuki showrooms, service "
-            "centers, workshops, FAQs, or policies. Always call this tool before "
-            "answering — never answer from general knowledge."
+            "Use this tool for ANY query related to Maruti Suzuki showrooms, service centers, "
+            "workshops, booking rules, FAQs, or policies. Pass the user query directly as input."
         ),
     )
 
     return FunctionAgent(
-        tools=[maruti_tool],  # add more tools here later, e.g. dealership_locator_tool
+        tools=[maruti_tool],
         llm=Settings.llm,
         system_prompt=SYSTEM_PROMPT,
     )
