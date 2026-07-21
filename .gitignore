@@ -14,6 +14,7 @@ chinook.db
 *.txt
 *.pdf
 
+
 # Python
 __pycache__/
 *.pyc
@@ -32,11 +33,14 @@ venv/
 
 # Logs
 *.log
+*.md
+
 
 # Large datasets
 data/
 datasets/
 chroma_db/
+Dataaset
 
 
 # Model files
@@ -45,6 +49,7 @@ chroma_db/
 *.pth
 *.ckpt
 .json
+
 
 
 # VS Code
