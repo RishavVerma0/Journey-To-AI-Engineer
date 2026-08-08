@@ -24,6 +24,9 @@ class Cart:
         self.items = []
 
     def add(self, product, quantity=1):
+        if quantity <= 0:
+            raise ValueError("Quantity must be greater than 0")
+
         self.items.append((product, quantity))
 
     def remove(self, product_name):
@@ -52,9 +55,10 @@ class Cart:
         result = ["\n--- CART ---"]
 
         for product, quantity in self.items:
+            total = product.final_price() * quantity
+
             result.append(
-                f"{product.name} x {quantity} = "
-                f"₹{product.final_price() * quantity:.2f}"
+                f"{product.name} x {quantity} = ₹{total:.2f}"
             )
 
         result.append(f"Total items: {len(self)}")
@@ -63,18 +67,22 @@ class Cart:
         return "\n".join(result)
 
 
+# Products
 laptop = Product("Laptop", 60000)
 phone = DiscountProduct("Phone", 30000, 10)
 headphones = DiscountProduct("Headphones", 5000, 20)
 
+# Cart
 cart = Cart()
 
 cart.add(laptop, 1)
 cart.add(phone, 2)
 cart.add(headphones, 3)
 
+# Display cart
 print(cart)
 
+# Iterate over cart
 print("\nIterating over cart:")
 
 for product, quantity in cart:
