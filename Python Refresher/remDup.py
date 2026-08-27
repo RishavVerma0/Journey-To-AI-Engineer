@@ -1,4 +1,4 @@
-# emove Duplicates from Sorted Array
+# Remove Duplicates from Sorted Array
 
 # Given a sorted list of integers, remove duplicates in-place so each element appears only once.
 
