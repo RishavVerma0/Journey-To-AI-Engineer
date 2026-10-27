@@ -53,7 +53,6 @@
 # Explanation:
 
 # The only valid path is: (0,0) → (0,1) → (0,2) → (0,3)
-
 class Solution:
     def createGrid(self, m: int, n: int) -> list[str]:
         top = "." * n
