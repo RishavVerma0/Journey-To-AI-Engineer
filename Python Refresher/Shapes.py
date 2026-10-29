@@ -35,7 +35,7 @@ class Circle(Shape):
     def area(self):
         return math.pi * self.radius ** 2
 
-    def perimeter(self):
+    def perimeter(self): # type: ignore
         return 2 * math.pi * self.radius
 
 
