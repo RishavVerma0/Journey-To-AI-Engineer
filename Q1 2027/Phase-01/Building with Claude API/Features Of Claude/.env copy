@@ -1,0 +1,9 @@
+# Ollama — Anthropic API compatibility
+ANTHROPIC_BASE_URL=http://localhost:11434
+ANTHROPIC_AUTH_TOKEN=ollama
+
+# Local LLM
+ANTHROPIC_MODEL=qwen2.5:3b
+
+# Ollama embeddings — for RAG projects
+OLLAMA_EMBEDDING_MODEL=nomic-embed-text:latest
