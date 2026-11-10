@@ -64,6 +64,9 @@
 # 1 <= n == costs.length <= 105​​​​​​​
 # 1 <= costs[i] <= 104
 
+from typing import List
+
+
 class Solution:
     def climbStairs(self, n: int, costs: List[int]) -> int:
         f0 = f1 = f2 = 0
