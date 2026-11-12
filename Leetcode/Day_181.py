@@ -69,4 +69,4 @@ class Solution:
                 inc = 1
                 dec = 1
             maxLen = max(maxLen, inc, dec)
-        return 
+        return maxLen
