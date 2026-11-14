@@ -70,4 +70,4 @@ class Solution:
                 if 0 < s < best:
                     best = s
 
-        return -1 if best == float('inf') else best # type: ignore
+        return best if best != float('inf') else -1 # type: ignore
