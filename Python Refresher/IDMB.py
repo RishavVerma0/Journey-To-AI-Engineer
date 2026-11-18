@@ -9,7 +9,7 @@ from enum import Enum
 
 
 # --------------------------------
-# Message Status
+# Message 
 # --------------------------------
 
 class MessageStatus(Enum):
