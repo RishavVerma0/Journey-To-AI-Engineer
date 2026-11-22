@@ -34,3 +34,7 @@
 
 # 1 <= s.length <= 100
 # s[i] is either 'a' or 'b'.
+
+class Solution:
+    def checkString(self, s: str) -> bool:
+        return 'ba' not in s
